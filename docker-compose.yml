@@ -1,0 +1,22 @@
+version: "3.7"
+services:
+
+  postgresql_db:
+    container_name: "postgres"
+    image: "postgres"
+    restart: always
+    ports:
+      - "5433:5432"
+    environment:
+      POSTGRES_DB: /data/postgress
+      POSTGRES_USER: tuantrancode
+      POSTGRES_PASSWORD: tuantrancode
+    volumes:
+      - postgresql_db:/data/postgress
+    networks:
+      postgresql_db:
+networks:
+  postgresql_db:
+    driver: bridge
+volumes:
+  postgresql_db:
