@@ -3,17 +3,18 @@ services:
   postgresql_db:
     container_name: "postgres"
     image: "postgres"
+    restart: always
+    ports:
+      - "5433:5432"
     environment:
-      PGDATA: data/data_postgress
+      POSTGRES_DB: /data/postgress
       POSTGRES_USER: tuantrancode
-      POSTGRES_PASSWORD: password
+      POSTGRES_PASSWORD: tuantrancode
     volumes:
       - postgresql_db:/data/postgress
-    ports:
-      - "5332:5432"
     networks:
       postgresql_db:
-    restart: unless-stopped
+
 networks:
   postgresql_db:
     driver: bridge
