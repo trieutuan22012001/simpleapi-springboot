@@ -1,4 +1,4 @@
-package com.singleapi;
+package com.singleapi.model;
 
 import jakarta.persistence.*;
 
