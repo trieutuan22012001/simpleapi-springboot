@@ -3,7 +3,7 @@
 ### Spring Boot version 3.0.5 
 ### java language
 ### JDK 17
-### Postrest for database
+### Postgres for database
 
 ## in this project, i build a simple api for get, post customer data 
 
